@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<!-- 第 1 行起就是你的课堂：html 标签告诉浏览器"这是一份网页"
+     lang="zh-CN" 告诉浏览器这是中文，影响断行和朗读 -->
+<html lang="zh-CN" data-theme="light">
+
+<head>
+  <!-- head 里的东西不会显示在页面上，是给浏览器和搜索引擎看的 -->
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>周不周 · 个人主页</title>
+  <meta name="description" content="计算机系新生的个人主页">
+
+  <!-- 把"样式"分开放在另一个文件里，这是前端第一课：结构与外观分离 -->
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <!-- header / nav / main / section / footer 这些叫"语义标签"：
+       它们不改变外观，但让代码可读，也让手机和读屏软件能理解页面结构 -->
+  <header class="site-header">
+    <a class="logo" href="#top">周不周</a>
+
+    <nav class="nav">
+      <a href="#about">关于</a>
+      <a href="#projects">项目</a>
+      <a href="#contact">联系</a>
+    </nav>
+
+    <button id="theme-toggle" class="theme-toggle" aria-label="切换深色模式">🌙</button>
+  </header>
+
+  <main id="top">
+    <!-- 第一屏：别人进来 3 秒内要知道你是谁 -->
+    <section class="hero">
+      <p class="hero-hello">你好，我是</p>
+      <h1 class="hero-name">周不周</h1>
+      <p class="hero-tagline">
+        周不周，一个从来没摸过电脑却在AI大爆发的年代进了计算机系的大一新生。
+      </p>
+      <p class="hero-actions">
+        <a class="btn" href="#projects">看看我的项目</a>
+        <a class="btn btn-ghost" href="mailto:you@example.com">给我写邮件</a>
+      </p>
+    </section>
+
+    <section id="about" class="section">
+      <h2>关于我</h2>
+      <p>
+         这个网站是我的个人说明书。<br>
+         现在我跟着学校课程进度逐步学习前端和JAVA方面的内容，后续还会涉及到C语言和人工智能等方向。<br>
+         当然我不想仅仅局限于课堂。也许，我可以在某些方面做得更出色。
+      </p>
+
+      <ul class="facts">
+        <li><strong>现在在学：</strong>HTML、CSS、JavaScript、Java</li>
+        <li><strong>个人感兴趣的方向：</strong>AI、Python</li>
+        <li><strong>近期目标：</strong>让这个网站出现在一个属于我的网址上</li>
+      </ul>
+    </section>
+
+    <section id="projects" class="section">
+      <h2>项目</h2>
+      <p class="section-note">先放三个"想做"的，做完一个就把它变成链接。</p>
+
+      <div class="cards">
+        <article class="card">
+          <h3>我的项目展示</h3>
+          <p>用 HTML 表格 + CSS 做一张有内容的目录表。</p>
+          <p class="tags"><span>HTML</span><span>CSS</span></p>
+        </article>
+
+        <article class="card">
+          <h3>GitHub 主页</h3>
+          <p>把每次练习都提交上去，绿色方块会长成你的学习记录。</p>
+          <p class="tags"><span>Git</span></p>
+        </article>
+
+        <article class="card">
+          <h3>这个个人网站</h3>
+          <p>README 里写下每天改了什么，一个月后回头看会很爽。</p>
+          <p class="tags"><span>HTML</span><span>CSS</span><span>JS</span></p>
+        </article>
+      </div>
+    </section>
+
+    <section id="contact" class="section">
+      <h2>联系我</h2>
+      <p>欢迎交流学习路线，或者指出这个网站的毛病。</p>
+      <ul class="links">
+        <li><a href="mailto:you@example.com">3205899477@qq.com</a></li>
+        <li><a href="https://github.com/" target="_blank" rel="noopener">GitHub</a></li>
+      </ul>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <p>© <span id="year"></span> 周不周 · 用 HTML、CSS、JavaScript 手写，没有模板</p>
+  </footer>
+
+  <!-- 脚本放最后：先让页面出现，再执行 JS，用户不会看到空白 -->
+  <script src="script.js"></script>
+</body>
+
+</html>
